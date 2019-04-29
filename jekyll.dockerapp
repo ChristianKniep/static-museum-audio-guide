@@ -1,0 +1,18 @@
+---
+version: 0.0.1
+name: jekyll
+description: "Static museum audio guide"
+maintainers:
+- name: Christian Kniep
+  email: christian@qnib.org
+targets:
+  swarm: true
+  kubernetes: true
+---
+version: "3.7"
+services:
+    www:
+        image: qnib/static-museum-audio-guide:latest
+        ports:
+            - 4000:4000
+---
